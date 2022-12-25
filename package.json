@@ -1,0 +1,25 @@
+{
+  "name": "vscode-cauldron",
+  "displayName": "vscode-cauldron",
+  "description": "Language Support for Cauldron Programming Language",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "cauldron",
+      "aliases": ["Cauldron", "cauldron"],
+      "extensions": ["cld"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "cauldron",
+      "scopeName": "source.cauldron",
+      "path": "./syntaxes/cauldron.tmLanguage.json"
+    }]
+  }
+}
