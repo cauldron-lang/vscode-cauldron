@@ -1,32 +1,62 @@
 {
-	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "Cauldron",
-	"patterns": [
-		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#strings"
-		}
-	],
-	"repository": {
-		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.cauldron",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
-		},
-		"strings": {
-			"name": "string.quoted.double.cauldron",
-			"begin": "\"",
-			"end": "\"",
-			"patterns": [
-				{
-					"name": "constant.character.escape.cauldron",
-					"match": "\\\\."
-				}
-			]
-		}
-	},
-	"scopeName": "source.cauldron"
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Cauldron",
+  "patterns": [
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#variables"
+    },
+    {
+      "begin": "\"",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.begin.cauldron"
+        }
+      },
+      "comment": "double quoted string",
+      "end": "\"",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.end.cauldron"
+        }
+      },
+      "name": "string.quoted.double.cauldron"
+    }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.cauldron",
+          "match": "\\b(if|while|fn|export|import)\\b"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.cauldron",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.cauldron",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "variables": {
+      "patterns": [
+        {
+          "comment": "variables",
+          "name": "variable.other.cauldron",
+          "match": "\\b[a-z0-9_]+\\b"
+        }
+      ]
+    }
+  },
+  "scopeName": "source.cauldron"
 }
