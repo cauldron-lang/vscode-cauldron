@@ -1,6 +1,6 @@
 # vscode-cauldron README
 
-This is the README for your extension "vscode-cauldron". After writing up a brief description, we recommend including the following sections.
+Support for the Cauldron programming language
 
 ## Features
 

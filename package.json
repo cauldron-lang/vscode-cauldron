@@ -1,10 +1,13 @@
 {
   "name": "vscode-cauldron",
   "displayName": "vscode-cauldron",
-  "description": "Language Support for Cauldron Programming Language",
+  "description": "Support for Cauldron Programming Language",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.74.0"
+  },
+  "repository": {
+    "url": "https://github.com/cauldron-lang/vscode-cauldron"
   },
   "categories": [
     "Programming Languages"
